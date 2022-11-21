@@ -1,0 +1,38 @@
+<!-- form handling -->
+ <form action="/api/supplierRates" method="POST" id="add_supplierRate">
+    <div class="new_supplier">
+        <div class="form-group">
+            <label for="supplierRateId" class="text-light">SupplierRateId</label>
+            <input type="number" readonly="readonly" name="supplierRateId" value=<%= supplierRateIdMax + 1 %> placeholder=<%= supplierRateIdMax + 1 %> >
+        </div>
+        <div class="form-group">
+            <label for="supplierId" class="text-light">SupplierId</label>
+            <input type="number" name="supplierId" value="" >
+        </div>
+        <div class="form-group">
+            <label for="Rate" class="text-light">Rate</label>
+            <input type="number" name="rate" value="" >
+        </div>
+        <div class="form-group">
+            <label for="rateStartDate" class="text-light">RateStartDate</label>
+            <input type="date" name="rateStartDate" value="" >
+        </div>
+        <div class="form-group">
+            <label for="rateEndDate" class="text-light">RateEndDate</label>
+            <input type="date" name="rateEndDate" value="" >
+        </div>
+        <div class="form-group">
+            <label for="CreatedBy" class="text-light">Created By</label>
+            <input type="text" name="createdBy" value="" >
+        </div>
+        <div class="form-group">
+            <label for="CreatedOn" class="text-light">Created On</label>
+            <input type="date" name="createdOn" value="" placeholder="01/01/1800" >
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>

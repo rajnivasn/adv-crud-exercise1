@@ -1,0 +1,62 @@
+<%- include('partials/header') %>
+
+<!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-supplier" class="border-shadow">
+                    <span class="text-gradient">New Supplier <i class="fas fa-user"></i></span>
+                </a>
+            </div>
+
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>CreatedBy</th>
+                            <th>CreatedOn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('partials/showsupplier') %>
+                    </tbody>
+                </table>
+
+            </form>
+        </div>
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-supplierRate" class="border-shadow">
+                    <span class="text-gradient">New Supplier Rate <i class="fas fa-user"></i></span>
+                </a>
+            </div>
+
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Supplier Rate ID</th>
+                            <th>SupplierID</th>
+                            <th>Rate</th>
+                            <th>RateStartDate</th>
+                            <th>RateEndDate</th>
+                            <th>CreatedBy</th>
+                            <th>CreatedOn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('partials/showsupplierrate') %>
+                    </tbody>
+                </table>
+
+            </form>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+<%- include('partials/footer') %>

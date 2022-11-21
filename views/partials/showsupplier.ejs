@@ -1,0 +1,17 @@
+<% for(var i = 0; i < suppliers.length; i++) { %>
+<tr>
+    <td><%= suppliers[i].supplierId %></td>
+    <td><%= suppliers[i].name %></td>
+    <td><%= suppliers[i].address %></td>
+    <td><%= suppliers[i].createdBy %></td>
+    <td><%= (new Date(suppliers[i].createdOn)).toLocaleDateString() %></td>
+    <td>
+        <a href="/update-supplier?supplierId=<%= suppliers[i].supplierId%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete supplier" data-id=<%= suppliers[i].supplierId%> >
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

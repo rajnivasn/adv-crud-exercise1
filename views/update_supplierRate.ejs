@@ -1,0 +1,64 @@
+<!-- include header -->
+<%- include('partials/header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Suppliers Rates</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Supplier Rate</h2>
+            <span class="text-light">Use the below form to Update a supplier Rate</span>
+        </div>
+
+        <!-- form handling -->
+ <form method="POST" id="update_supplierRate">
+    <div class="new_supplier">
+        <div class="form-group">
+            <label for="supplierRateId" class="text-light">SupplierRateID</label>
+            <input type="number" readonly="readonly" name="supplierRateId" value="<%= supplierRate.supplierRateId %>"
+                   placeholder= "<%= supplierRate.supplierRateId %>" >
+        </div>
+        <div class="form-group">
+            <label for="supplierId" class="text-light">SupplierID</label>
+            <input type="number" name="supplierId" value="<%= supplierRate.supplierId %>" placeholder=<%= supplierRate.supplierId %>>
+        </div>
+        <div class="form-group">
+            <label for="Rate" class="text-light">Rate</label>
+            <input type="number" name="rate" value="<%= supplierRate.rate%>" placeholder=<%= supplierRate.rate %>>
+        </div>
+        <div class="form-group">
+            <label for="RateStartDate" class="text-light">RateStartDate</label>
+            <input type="date" name="rateStartDate" value="<%= supplierRate.rateStartDate%>" placeholder=<%= supplierRate.rateStartDate %>>
+        </div>
+        <div class="form-group">
+            <label for="RateEndDate" class="text-light">RateEndDate</label>
+            <input type="date" name="rateEndDate" value="<%= supplierRate.rateEndDate%>" placeholder=<%= supplierRate.rateEndDate %>>
+        </div>
+        <div class="form-group">
+            <label for="CreatedBy" class="text-light">CreatedBy</label>
+            <input type="text" name="createdBy" value="<%= supplierRate.createdBy%>" placeholder=<%= supplierRate.createdBy %>>
+        </div>
+        <div class="form-group">
+            <label for="CreatedOn" class="text-light">CreatedOn</label>
+            <input type="date" name="createdOn" value="<%= supplierRate.createdOn%>" placeholder=<%= supplierRate.createdOn %>>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('partials/footer') %>
+<!-- /include footer -->

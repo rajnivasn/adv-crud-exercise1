@@ -1,0 +1,19 @@
+<% for(var i = 0; i < supplierRates.length; i++) { %>
+<tr>
+    <td><%= supplierRates[i].supplierRateId %></td>
+    <td><%= supplierRates[i].supplierId %></td>
+    <td><%= supplierRates[i].rate %></td>
+    <td><%= (new Date(supplierRates[i].rateStartDate)).toLocaleDateString() %></td>
+    <td><%= supplierRates[i].rateEndDate ? (new Date(supplierRates[i].rateEndDate)).toLocaleDateString() : "" %></td>
+    <td><%= supplierRates[i].createdBy %></td>
+    <td><%= (new Date(supplierRates[i].createdOn)).toLocaleDateString() %></td>
+    <td>
+        <a href="/update-supplierRate?supplierRateId=<%= supplierRates[i].supplierRateId%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete supplierRate" data-id=<%= supplierRates[i].supplierRateId%> >
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>
