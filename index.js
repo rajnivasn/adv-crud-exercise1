@@ -5,6 +5,7 @@ const bodyparser = require("body-parser");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const axios = require("axios");
+const cors = require("cors");
 
 const connectDB = require('./server/database/connection');
 
@@ -13,6 +14,18 @@ dotenv.config({ path : 'config.env' });
 
 //log request
 app.use(morgan('tiny'));
+
+//cors
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
 
 // mongodb connection
 connectDB();
